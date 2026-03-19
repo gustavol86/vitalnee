@@ -1,0 +1,54 @@
+<footer>
+    <div class="container">
+        <div class="row text-start ">
+            <div class="col-md-3 mb-4">
+                <h6 class="tit-footer">Menú</h6>
+                <ul class="list-unstyled tam-footer">
+                    <li><a href="inicio" class="nav-link p-0 text-white">Inicio</a></li>
+                    <li><a href="aranceles" class="nav-link p-0 text-white">Aranceles</a></li>
+                    <li><a href="docs/Reglamento.pdf" class="nav-link p-0 text-white">Reglamento</a></li>
+                    <li><a href="galeria" class="nav-link p-0 text-white">Galería</a></li>
+                    <li><a href="contacto" class="nav-link p-0 text-white">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 mb-4">
+                <h6 class="tit-footer">Especialidades</h6>
+                <ul class="list-unstyled tam-footer">
+                    <li><a href="psicologia">Psicología</a></li>
+                    <li><a href="educaciondiferencial">Educación Diferencial</a></li>
+                    <li><a href="psicopedagogia">Psicopedagogía</a></li>
+                    <li><a href="fonoaudiologia">Fonoaudiología</a></li>
+                    <li><a href="terapiaocupacional">Terapia Ocupacional</a></li>
+                    <li><a href="educacionemocional">Educación Emocional</a></li>
+                    <li><a href="apoyopedagogico">Apoyo Pedagógico</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 mb-4">
+                <h6 class="tit-footer">Información</h6>
+                <div class="tam-footer">
+                    <p><a href="https://api.whatsapp.com/send?phone={{ site.get('whatsapp') }}&text=Me interesa agendar una hora"><i class="fab fa-whatsapp footer-icon"></i>{{ site.get('whatsapp') }}</a></p>
+                    <p><a href="tel:+{{ site.get('whatsapp') }}"><i class="fas fa-phone footer-icon"></i>{{ site.get('telefono') }}</a></p>
+                    <p><a href="mailto:contacto@vitalnee.cl"><i class="fas fa-envelope footer-icon"></i>{{ site.get('correo_contacto') }}</a></p>
+                    
+                    <p><a href="#"><i class="fas fa-map-marker-alt footer-icon"></i>{{ site.get('direccion') }}</a></p>
+                </div>
+            </div>
+            <div class="col-md-2 mb-4">
+                <iframe src="getValue('urlmaps')" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <img src="img/webpay.jpg" width="300">
+            </div>
+        </div>
+
+        <!-- Botón scroll top -->
+        <a href="#" class="scroll-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+    </div>
+
+    <!--
+        <p>{{ getValue('instagram') }}</p>
+        <a [href]="getValue('instagram')" target="_blank">Ir al Instagram</a>
+        <div [title]="getValue('direccion')"></div>
+        <img [src]="getValue('url_logo')" alt="Logo">
+    -->
+

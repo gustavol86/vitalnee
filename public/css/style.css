@@ -1,0 +1,115 @@
+/*-------------GENERALES--------------------------------*/
+@font-face { font-family: 'Poetsen One'; src: url('../fonts/PoetsenOne-Regular.ttf') format('truetype'); }
+body{font-family: 'Poetsen One', sans-serif;}
+
+@media (max-width: 480px) {
+	.carousel-caption h1{font-size: 1.0rem !important;}
+}
+
+.contenedor-principal {max-width: 980px;margin: 2rem auto 4rem auto;}
+.contenedor-secundario {max-width: 90%;margin: 2rem auto 4rem auto;}
+.titulo{font-size: 50px;color: #562acf;}
+.subtitulo{font-size: 40px;font-weight: 400;color: #562acf;}
+.textocolorPrincipal{color:#d45783;}
+.fondocolorPrincipal{background-color:#d45783; color: #fff;}
+.fondocolorPrincipal:hover{background-color:#d45783 !important; color: #fff;}
+.border-img-especialidad{border-radius: 30px;}
+.btn_reserva{background-color:#d45783; color: #fff;}
+.btn_reserva:hover{background-color:#562acf; color: #fff;}
+.btn-primary:hover {color: #fff;background-color: #d45783;border-color: #d45783;}
+.caja_especialidades{text-decoration: none;}
+.img-fluid2{max-width: 80%;}
+/*------------------------------------------------------*/
+
+/*-------------PROFESIONALES----------------------------*/
+.card-img-overlay-hover {position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: #d45783;color: white;opacity: 0;display: flex;justify-content: center;align-items: center;text-align: center;padding: 15px;transition: opacity 0.3s ease;font-size: 12px;}
+.card-img-container:hover .card-img-overlay-hover {opacity: 1;}
+/*------------------------------------------------------*/
+
+/*-------------HEADER-----------------------------------*/
+.logo {font-weight: 700;font-size: 1.5rem;color: #0d6efd;user-select: none}
+.header{background-color: #d45783}
+.navbar-nav .dropdown-menu {min-width: 10rem}
+.header_text a{color: #fff !important}
+.header_text i{color: #fff !important}
+.header_text img{color: #fff}
+.texto-menu li a{font-size: 20px}
+.texto-menu li a:hover{color: #d45783}
+.texto-menu .nav-link.active:hover{color: #d45783}
+/*------------------------------------------------------*/
+
+/*-------------Footer-----------------------------------*/
+footer {background-color: #6a389c;color: white;padding-top: 60px;position: relative;}
+footer h6 {font-weight: bold;margin-bottom: 10px;display: inline-block;}
+footer a {color: white;text-decoration: none;}
+footer a:hover {text-decoration: underline;}
+.footer-icon {margin-right: 10px;}
+.footer-bottom {background-color: #6D5090;text-align: center;padding: 10px 0;font-size: 0.9rem;}
+.social-icons a {color: white;margin: 0 10px;font-size: 1.2rem;}
+.scroll-top {position: fixed;bottom: 10px;right: 10px;background-color: #9B6FCB;padding: 10px;border-radius: 5px;}
+.scroll-top i {color: white;}
+.tam-footer{font-size: 18px}
+.tit-footer{font-size: 22px}
+.footer-bottom {background-color: #391d77;text-align: center;padding: 10px 0;font-size: 1.2rem;}
+.footer-bottom a{text-decoration: none; color: #fff}
+/*------------------------------------------------------*/
+
+/*-------------CONVENIOS--------------------------------*/
+.carrusel-container{width: 100%;max-width: 960px;}
+.slick-slide {margin: 10px 0;}
+.slick-slide img {display: block;/*filter: grayscale(100%)*/}
+.slick-track{background-color: #fff}
+/*------------------------------------------------------*/
+
+/*-------------OPINION CLIENTES-------------------------*/
+.card {background: linear-gradient(135deg, rgba(124, 58, 237, 0.15), rgba(99, 102, 241, 0.15));border-radius: 18px;border: none;box-shadow:0 8px 20px rgba(124, 58, 237, 0.2),inset 0 0 10px rgba(255,255,255,0.1);color: #212529;padding: 2rem 1.8rem;height: 100%;display: flex;flex-direction: column;justify-content: center;transition: transform 0.3s ease, box-shadow 0.3s ease;}
+.card:hover {transform: translateY(-8px) scale(1.04);box-shadow: 0 16px 28px rgba(124, 58, 237, 0.3), inset 0 0 15px rgba(255,255,255,0.15);cursor: default;}
+.card-title {font-weight: 700;font-size: 1.3rem;margin-bottom: 0.5rem;letter-spacing: 0.02em;text-shadow: 1px 1px 3px rgba(0,0,0,0.05);color: #212529;}
+.star-rating {display: flex;gap: 0.2rem;margin-bottom: 1.2rem;}
+.star-rating .material-icons {font-size: 24px;color: #fbbf24; /* Amber 400 */filter: drop-shadow(0 0 1px rgba(0,0,0,0.1));transition: color 0.3s ease;}
+.fs-italic {font-style: italic;font-size: 1rem;line-height: 1.5;text-shadow: 1px 1px 3px rgba(0,0,0,0.02);user-select: text;color: #212529;}
+/*------------------------------------------------------*/
+
+/*-------------LISTADO ESPECIALIDADES-------------------*/
+.circle-text {width: 450px;height: 450px;border-radius: 50%;background-color: #fde8a7;display: flex;align-items: center;justify-content: center;text-align: center;font-weight: bold;padding: 20px;margin-left: -90px;;font-size: 30px}
+.label-box {color: white;padding: 10px 20px;margin-bottom: 10px;border-radius: 20px 0 0 20px; font-size: 26px}
+.label-box a{text-decoration: none; color: #fff}
+.psicologia { background-color: #f57c6e; }
+.educacion-dif { background-color: #8cd170; }
+.psicopedagogia { background-color: #8a71c1; }
+.fonoaudiologia { background-color: #f7e445; }
+.terapia-ocupacional{ background-color: #5c91d0; }
+.educacion-emocional{ background-color: #f49c5b; }
+.apoyo-pedagogico { background-color: #2aa7d7; }
+.texto_especialidad {font-size: 18px}
+.titulo_especialidad{color: #562acf;}
+.text-justify{text-align: justify;}
+/*------------------------------------------------------*/
+
+/*-------------ARANCELES--------------------------------*/
+.pricing-card {background-color: #fff;border-radius: 10px;box-shadow: 0 5px 15px rgba(0,0,0,0.1);overflow: hidden;position: relative;padding-bottom: 30px;transition: transform 0.3s ease;}
+.pricing-card:hover {transform: translateY(-5px);}
+.card-header {color: white;text-align: center;padding: 20px;}
+.inicial {background-color: #d6567e;}
+.avanzado {background-color: #4e7ce0;}
+.intensivo {background-color: #a776bd;}
+.popular-tag {position: absolute;top: 42px;right: 0;background: #e74c3c;color: white;font-size: 0.75rem;font-weight: bold;padding: 4px 8px;transform: rotate(45deg);transform-origin: top right;}
+.feature-list {list-style: none;padding-left: 0;margin: 0;}
+.feature-list li {padding: 10px 20px;border-bottom: 1px solid #eee;}
+.feature-list i {color: #4caf50;margin-right: 10px;}
+.btn-custom {background-color: #f16334;color: white;font-weight: bold;margin-top: 15px;}
+.btn-custom:hover {background-color: #e0562c;}
+.tit-plan{font-size: 30px}
+.tit_list{font-size: 20px}
+.icono-peso{color: green;margin: 3%;}
+.icono-peso-titulo{color: #d4985b;margin: 3%;}
+.list-unstyled li{font-size: 14px;}
+/*------------------------------------------------------*/
+
+
+.carousel-caption{right: 0% !important;left: 0% !important;}
+.hero-container {position: relative;margin: 0 auto;}        
+
+.image-container {position: relative;border-radius: 10px;/*overflow: hidden;max-width: 480px;margin: 0 auto 2rem auto;*/}
+.image-container img {width: 100%;display: block;border-radius: 50%;}
+.img-text {position: absolute;top: 50%;left: 50%;width: 90%;transform: translate(-50%, -50%);color: white;font-size: 24px;/*font-weight: 600*/;text-align: center;text-shadow: 0 0 5px rgba(0,0,0,0.8);}

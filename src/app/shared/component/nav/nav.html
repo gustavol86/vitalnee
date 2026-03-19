@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+  <div class="container-fluid px-4 container d-flex justify-content-center">
+    <div class="logo">
+      <!-- Si tienes una ruta '': usa routerLink="/" -->
+      <a routerLink="/"><img src="img/logo2.jpg" width="300"></a>
+    </div>
+  </div>
+
+  <div class="container-fluid px-4 d-flex justify-content-end">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 texto-menu">
+
+        <!-- Inicio -->
+        <!--<li class="nav-item"><a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</a></li>-->
+        <li class="nav-item"><a class="nav-link" routerLinkActive="active" routerLink="inicio">inicio</a></li>
+
+
+        <!-- Especialidades (dropdown con enlaces estáticos por ahora) -->
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Especialidades</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLinkActive="active" routerLink="psicologia">Psicología</a></li>
+            <li><a class="dropdown-item" routerLinkActive="active" routerLink="educaciondiferencial">Educación Diferencial</a></li>
+            <li><a class="dropdown-item" routerLinkActive="active" routerLink="psicopedagogia">Psicopedagogía</a></li>
+            <li><a class="dropdown-item" routerLinkActive="active" routerLink="fonoaudiologia">Fonoaudiología</a></li>
+            <li><a class="dropdown-item" routerLinkActive="active" routerLink="terapiaocupacional">Terapia Ocupacional</a></li>
+            <li><a class="dropdown-item" routerLinkActive="active" routerLink="educacionemocional">Educación Emocional</a></li>
+            <li><a class="dropdown-item" routerLinkActive="active" routerLink="apoyopedagogico">Apoyo Pedagógico</a></li>
+          </ul>
+        </li>        
+        
+        <li class="nav-item"><a class="nav-link" routerLinkActive="active" routerLink="aranceles">Aranceles</a></li>
+        <li class="nav-item"><a class="nav-link" href="/docs/REGLEMENTO_INTERNO_VITALNEE.pdf" target="_blank">Reglamento</a></li>
+        <li class="nav-item"><a class="nav-link" routerLinkActive="active" routerLink="galeria">Galería</a></li>
+        <li class="nav-item"><a class="nav-link" routerLinkActive="active" routerLink="contacto">Contacto</a></li>
+        
+
+        <li class="nav-item"><a class="nav-link" routerLinkActive="active" routerLink="prueba">Prueba</a></li>
+        <li class="nav-item"><a class="nav-link" routerLinkActive="active" routerLink="login">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

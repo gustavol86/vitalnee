@@ -1,0 +1,13 @@
+footer {background-color: #6a389c;color: white;padding-top: 60px;position: relative;}
+footer h6 {font-weight: bold;margin-bottom: 10px;display: inline-block;}
+footer a {color: white;text-decoration: none;}
+footer a:hover {text-decoration: underline;}
+.footer-icon {margin-right: 10px;}
+.footer-bottom {background-color: #6D5090;text-align: center;padding: 10px 0;font-size: 0.9rem;}
+.social-icons a {color: white;margin: 0 10px;font-size: 1.2rem;}
+.scroll-top {position: fixed;bottom: 10px;right: 10px;background-color: #9B6FCB;padding: 10px;border-radius: 5px;}
+.scroll-top i {color: white;}
+.tam-footer{font-size: 18px}
+.tit-footer{font-size: 22px}
+.footer-bottom {background-color: #391d77;text-align: center;padding: 10px 0;font-size: 1.2rem;}
+.footer-bottom a{text-decoration: none; color: #fff}

@@ -1,0 +1,19 @@
+<header class="bg-light border-bottom ">
+    <div class="container-fluid px-4 py-1 d-flex justify-content-end align-items-center header">
+        <div class="header_text ms-5 fw-bold">
+            <a href="tel:+{{ site.get('whatsapp') }}" class="text-decoration-none"><i class="fa-solid fa-phone"></i></a>
+        </div>
+        <div class="header_text ms-5 fw-bold">
+            <a href="mailto:{{ site.get('correo_contacto') }}" class="text-decoration-none"><i class="fa-regular fa-envelope"></i></a>
+        </div>
+        <div class="header_text ms-5 fw-bold">
+            <a href="https://api.whatsapp.com/send?phone={{ site.get('whatsapp') }}&text=Me interesa agendar una hora" class="text-decoration-none"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <div class="header_text ms-5 fw-bold">
+            <a href="{{ site.get('instagram') }}" target="_blank" class="text-decoration-none"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="header_text ms-5 fw-bold">
+            <a href="{{ site.get('linkedin') }}" target="_blank" class="text-decoration-none"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+    </div>
+</header>

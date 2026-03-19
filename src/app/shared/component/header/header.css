@@ -1,0 +1,9 @@
+.logo {font-weight: 700;font-size: 1.5rem;color: #0d6efd;user-select: none}
+.header{background-color: #d45783}
+.navbar-nav .dropdown-menu {min-width: 10rem}
+.header_text a{color: #fff !important}
+.header_text i{color: #fff !important}
+.header_text img{color: #fff}
+.texto-menu li a{font-size: 20px}
+.texto-menu li a:hover{color: #d45783}
+.texto-menu .nav-link.active:hover{color: #d45783}
