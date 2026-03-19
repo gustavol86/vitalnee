@@ -2,24 +2,28 @@
    <section class="contenedor-principal">
       <div class="container py-5">
          <div class="row text-center mb-4">
-            <h2 class="titulo">Aranceles</h2>
+            <h2 class="titulo">Login</h2>
             <img src="img/barratitulo.jpg" class="img-fluid">
          </div>         
          <div class="row g-4">            
             <div class="card shadow login-card">
-                <h3 class="text-center mb-4">Iniciar Sesión</h3>
-                <form>
-                    <div class="mb-3">
+                <form #miform="ngForm" (ngSubmit)="ingresar()">
+
+                    <div class="mt-3">
                         <label class="form-label">Correo</label>
-                        <input type="email" class="form-control" placeholder="Tu correo">
+                        <input type="email" class="form-control" placeholder="Tu correo" [(ngModel)]="email" name="email" required>
                     </div>
 
-                    <div class="mb-3">
+                    <div class="mt-3">
                         <label class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" placeholder="Tu contraseña">
-                    </div>
+                        <input type="password" class="form-control" placeholder="Tu contraseña" [(ngModel)]="password" name="password" required>
+                    </div>                    
+                    <button class="btn btn-primary w-100 mt-3" type="submit">Ingresar</button>
 
-                    <button class="btn btn-primary w-100 mt-2">Ingresar</button>
+                    
+                    <p *ngIf="errorMessage" class="text-danger mt-2">
+                    {{ errorMessage }}
+                    </p>
                 </form>
 
                 <p class="text-center mt-3">

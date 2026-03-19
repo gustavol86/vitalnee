@@ -1,0 +1,80 @@
+<main class="container">
+   <section class="contenedor-principal">
+      <div class="container py-5">
+         
+         
+         <div class="row g-4">
+
+
+    <!-- Sidebar -->
+    <nav class="col-md-2 d-none d-md-block sidebar p-3">
+      <h4 class="text-white">Mi Dashboard</h4>
+      <hr>
+      <a href="#">Inicio</a>
+      <a href="#">Usuarios</a>
+      <a href="#">Reportes</a>
+      <a href="#">Configuración</a>
+    </nav>
+
+    <!-- Main content -->
+    <main class="col-md-10 ms-sm-auto px-md-4 py-4">
+
+      <!-- Header -->
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Panel de Control</h2>
+        <button class="btn btn-primary">Nuevo</button>
+      </div>
+
+      <!-- Cards -->
+      <div class="row g-4 mb-4">
+        <div class="col-md-4">
+          <div class="card p-3 shadow-sm">
+            <h6>Usuarios</h6>
+            <h3>1,245</h3>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-3 shadow-sm">
+            <h6>Ventas</h6>
+            <h3>$8,540</h3>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-3 shadow-sm">
+            <h6>Visitas</h6>
+            <h3>23,890</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Table -->
+      <div class="card shadow-sm p-3">
+        <h5 class="mb-3">Datos API</h5>
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Titulo</th>
+                <th>Precio</th>
+                <th>Descripción</th>
+                <th>Categoría</th>
+                <th>Imagen</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>{{ producto.title }}</td>
+                <td>{{ producto.price }}</td>
+                <td>{{ producto.description }}</td>
+                <td>{{ producto.category }}</td>
+                <td><img [src]="producto.image" width="50"></td>
+              </tr>              
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </main>
+  </div>
