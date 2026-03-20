@@ -19,10 +19,32 @@
     <!-- Main content -->
     <main class="col-md-10 ms-sm-auto px-md-4 py-4">
 
+    <!-- Loading -->
+      <!--@if (loading) {
+        <div class="text-center p-4">
+          <div class="spinner-border text-primary" role="status"></div>
+          <p class="mt-2">Cargando datos...</p>
+        </div>
+      }-->
+
+    <!-- ERROR -->      
+      @if (errorMessage) {
+        <div class="alert alert-danger mt-3">
+          {{ errorMessage }}
+        </div>
+      }
+
+
+
       <!-- Header -->
       <div class="d-flex justify-content-between align-items-center mb-4">
         <h2>Panel de Control</h2>
         <button class="btn btn-primary">Nuevo</button>
+        
+<button class="btn btn-danger float-end" (click)="cerrarSesion()">
+  Cerrar Sesión
+</button>
+
       </div>
 
       <!-- Cards -->
@@ -47,9 +69,43 @@
         </div>
       </div>
 
-      <!-- Table -->
-      <div class="card shadow-sm p-3">
-        <h5 class="mb-3">Datos API</h5>
+      <!-- Table singular -->
+      <div class="shadow-sm p-3">
+        <h5 class="mb-3" style="color: blueviolet; text-decoration: underline;">Datos API (retorna solo un registro)</h5>
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Titulo</th>
+                <th>Precio</th>
+                <th>Descripción</th>
+                <th>Categoría</th>
+                <th>Imagen</th>
+              </tr>
+            </thead>            
+            <tbody>
+              <!--@if (!loading && producto && producto.id) {-->
+              @if (producto && producto.id) {
+                <tr>
+                  <td>1</td>
+                  <td>{{ producto.title }}</td>
+                  <td>{{ producto.price }}</td>
+                  <td>{{ producto.description }}</td>
+                  <td>{{ producto.category }}</td>
+                  <td>
+                    <img [src]="producto.image" width="50">
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Table ALL -->
+      <div class="shadow-sm p-3">
+        <h5 class="mb-3" style="color: blueviolet; text-decoration: underline;">Datos API (retorna muchos registros)</h5>
         <div class="table-responsive">
           <table class="table table-striped">
             <thead>
@@ -62,16 +118,28 @@
                 <th>Imagen</th>
               </tr>
             </thead>
+            
             <tbody>
-              <tr>
-                <td>1</td>
-                <td>{{ producto.title }}</td>
-                <td>{{ producto.price }}</td>
-                <td>{{ producto.description }}</td>
-                <td>{{ producto.category }}</td>
-                <td><img [src]="producto.image" width="50"></td>
-              </tr>              
+              <!--@if (!loading) {-->
+              @if (productos) {
+                @for (item of productos; track $index) {
+                  <tr>
+                    <td>{{ $index + 1 }}</td>
+                    <td>{{ item.title }}</td>
+                    <td>{{ item.price }}</td>
+                    <td>{{ item.description }}</td>
+                    <td>{{ item.category }}</td>
+                    <td>
+                      <img [src]="item.image" width="60">
+                    </td>
+                  </tr>
+                }
+              } @else {
+                <p>no hay datos aun</p>
+              }
+              <!--}-->
             </tbody>
+
           </table>
         </div>
       </div>

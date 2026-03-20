@@ -1,3 +1,4 @@
+//import { authGuard } from './pags/services/auth'
 
 import { Routes } from '@angular/router';
 import { Inicio } from './pags/inicio/inicio';
@@ -14,7 +15,8 @@ import { Educacionemocional } from './pags/especialidades/educacionemocional/edu
 import { Apoyopedagogico } from './pags/especialidades/apoyopedagogico/apoyopedagogico';
 
 import { Prueba } from './pags/prueba/prueba';
-import { LoginComponent } from './pags/login/login'
+import { Login } from './pags/login/login'
+import { Dashboard } from './pags/dashboard/dashboard';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'inicio', pathMatch: 'full' },
@@ -32,13 +34,10 @@ export const routes: Routes = [
   { path: 'apoyopedagogico', component: Apoyopedagogico, title: 'Apoyopedagogico' },
 
   { path: 'prueba', component: Prueba, title: 'Prueba' },
-  //{ path: 'login', component: LoginComponent, title: 'Login' },
-
-  {
-    path: 'login',
-    loadComponent: () => import('./pags/login/login').then(m => m.LoginComponent)
-  },
-
+  //{ path: 'login', component: Login, title: 'Login' },
+  { path: 'login', loadComponent: () => import('./pags/login/login').then(m => m.Login)},
+  { path: 'dashboard', component: Dashboard, title: 'Dashboard' },
+  //{ path: 'dashboard', component: Dashboard, title: 'Dashboard', canActivate: [authGuard] },
   { path: '**', redirectTo: 'inicio' } //Redireccionar a inicio si la pagina buscada no existe
 ];
 

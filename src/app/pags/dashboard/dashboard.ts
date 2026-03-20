@@ -18,20 +18,30 @@ export class Dashboard {
   ) {}
 
   errorMessage = '';
-
   desc: string='';
+  //loading = false;
+  producto: any = {};
+  productos: any[] = [];
 
+  
+  cerrarSesion() {
+    //this.auth.logout();
+    this.router.navigate(['/login']);
+  }
 
-producto: any;
 
   ngOnInit() {
+    //this.loading = true;
+    this.errorMessage = '';
+
     this.auth.getProduct(1).subscribe({
       next: (data) => {
 
             //mostrar por consola el dato de la api
             console.log('Producto recibido:', data);
             this.producto = data;
-            
+            //this.loading = false
+
             console.log('ID: '+this.producto.id);
             console.log('Titulo: '+this.producto.title);
             console.log('Precio: '+this.producto.price)
@@ -40,9 +50,22 @@ producto: any;
             console.log('Imagen: '+this.producto.image);        
       },
       error: (err) => {
-        console.log('Error API:', err);
-        this.errorMessage = 'Credenciales incorrectas';
+        console.log('ERROR API:', err);
+        this.errorMessage = 'ERROR API';
+        //this.loading = false
       }
     });
+
+    this.auth.getProductAll().subscribe({
+      next: (data) => {
+
+        console.log('DATA API =>', data);  // confirma que llegan
+        this.productos = data;
+        //this.loading = false
+      },
+      error: (err) => 
+        console.error('ERROR API =>', err)
+    });
+
   }
 }
